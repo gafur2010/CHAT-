@@ -71,9 +71,14 @@ const SignIn = () => {
           type="password"
           className="form-control m-2 w-auto"
         />
-        <a className="link-info mx-auto mb-2" href="/auth/sign-up">
+        <p
+          className="link-info mx-auto mb-2"
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/auth/sign-up")}
+        >
           Don't have an account?
-        </a>
+        </p>
+
         <button
           onClick={loginUser}
           className="btn btn-primary mb-2 w-50 mx-auto"
