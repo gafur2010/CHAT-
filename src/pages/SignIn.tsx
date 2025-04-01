@@ -54,35 +54,30 @@ const SignIn = () => {
   }
 
   return (
-    <div>
-      <div className="card m-3 w-25 mt-5 mx-auto">
-        <h1 className="font-monospace text-info mx-auto mt-2">SIGN IN</h1>
+    <div className="d-flex align-items-center justify-content-center min-vh-100">
+      <div
+        className="card p-4 shadow-sm"
+        style={{ maxWidth: "400px", width: "100%" }}
+      >
+        <h1 className="text-center text-info mb-3">SIGN IN</h1>
         <input
           placeholder="Type email..."
           value={user.email}
           onChange={(e) => setUser({ ...user, email: e.target.value })}
           type="email"
-          className="form-control m-2 w-auto"
+          className="form-control mb-2"
         />
         <input
           placeholder="Type password..."
           value={user.password}
           onChange={(e) => setUser({ ...user, password: e.target.value })}
           type="password"
-          className="form-control m-2 w-auto"
+          className="form-control mb-3"
         />
-        <p
-          className="link-info mx-auto mb-2"
-          style={{ cursor: "pointer" }}
-          onClick={() => navigate("/auth/sign-up")}
-        >
+        <a className="text-center d-block text-info mb-2" href="/auth/sign-up">
           Don't have an account?
-        </p>
-
-        <button
-          onClick={loginUser}
-          className="btn btn-primary mb-2 w-50 mx-auto"
-        >
+        </a>
+        <button onClick={loginUser} className="btn btn-primary w-100">
           SIGN IN
         </button>
       </div>
